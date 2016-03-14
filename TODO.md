@@ -142,3 +142,4 @@
  * [ ] setindex!(rle, 801:900, 1:100) does setindex!(rle::RLEVector,
    value, indices::UnitRange) rather than looking for a two vector method
  * [ ] It seems that one cannot make a vector of RLEVectors
+ * [ ] last 3 lines in disjoin look wrong. Add test and then fix.

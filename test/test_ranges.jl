@@ -45,6 +45,5 @@ using Base.Test
 @test_throws ArgumentError inverse_ree([],[1])
 
 # disjoin
-# @test_throws ArgumentError disjoin(RLEVector([1,1,2],[1,2,3]), RLEVector([1,2,3,4,5],[1,2,3,4,5])) # Unequal lengths now OK
 @test disjoin( RLEVector([1,2,3,4], [1,3,8,10]), RLEVector([4,5,6,7],[3,4,9,10])) == [1,3,4,8,9,10]
 end # module

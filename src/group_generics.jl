@@ -52,7 +52,7 @@ for op in ops_group
             runvals = ($op)( x.runvalues[x_inds], y.runvalues[y_inds] )
             RLEVector( runvals, runends )
         end
-        # Rle, scalar
+        # Rle, Number
         ($op){T<:Integer}(x::RLEVector{Bool,T},y::Bool) = RLEVector( ($op)(x.runvalues,y), x.runends ) # Ambig fix
         ($op)(x::RLEVector,y::Number) = RLEVector( ($op)(x.runvalues,y), x.runends )
         # Number, Rle
